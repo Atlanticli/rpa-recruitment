@@ -1,7 +1,12 @@
 <?php
+require_once __DIR__ .'/../vendor/autoload.php';
+require_once __DIR__ .'/../MyGreeter/Client.php';
+
 
 class MyGreeter_Client_Test extends \PHPUnit_Framework_TestCase
 {
+
+
     public function setUp()
     {
         $this->greeter = new \MyGreeter\Client();
@@ -11,7 +16,8 @@ class MyGreeter_Client_Test extends \PHPUnit_Framework_TestCase
     {
         $this->assertEquals(
             get_class($this->greeter),
-            'MyGreeter\Client'
+            'MyGreeter\Client',
+            '1234'
         );
     }
 
